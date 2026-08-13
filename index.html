@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>【無料オンラインセミナー】協会づくりの「型」がわかる｜JINEN 16分類 体験会</title>
+<meta name="description" content="これから協会を立ち上げたい方へ。JINENの「コミュニティ16分類」で、あなたの協会が続く型を見つける無料オンライン体験セミナー。">
+<meta property="og:title" content="協会づくりの「型」がわかる｜JINEN 16分類 体験会">
+<meta property="og:description" content="これから協会を立ち上げたい方へ。無料オンラインで16分類フレームワークを体験。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0B1F3A;
+    --navy-mid:#1A3558;
+    --navy-light:#253F63;
+    --red:#D0021B;
+    --gold:#F0A500;
+    --green:#27AE60;
+    --white:#FFFFFF;
+    --light-gray:#F4F6F9;
+    --mid-gray:#8A9BB0;
+    --dark-gray:#3D4F63;
+    --radius:16px;
+    --shadow:0 20px 45px rgba(11,31,58,.12);
+    --shadow-sm:0 8px 22px rgba(11,31,58,.08);
+    --maxw:1120px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Noto Sans JP",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    color:var(--dark-gray);
+    background:var(--white);
+    line-height:1.85;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  .serif{font-family:"Noto Serif JP",serif;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  section{position:relative;}
+  h2.sec-title{
+    font-family:"Noto Serif JP",serif;
+    font-size:clamp(26px,4.4vw,40px);
+    font-weight:700;
+    line-height:1.4;
+    color:var(--navy);
+    text-align:center;
+    letter-spacing:.02em;
+  }
+  .sec-lead{
+    text-align:center;
+    color:var(--mid-gray);
+    font-weight:500;
+    letter-spacing:.14em;
+    font-size:13px;
+    margin-bottom:14px;
+  }
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;}
+  .reveal.on{opacity:1;transform:none;}
+
+  /* ===== TOP BAR ===== */
+  .topbar{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:14px 24px;
+    background:rgba(11,31,58,.0);
+    transition:background .3s ease,box-shadow .3s ease,padding .3s ease;
+  }
+  .topbar.scrolled{background:rgba(11,31,58,.96);box-shadow:0 4px 20px rgba(0,0,0,.2);padding:10px 24px;}
+  .logo{display:flex;align-items:center;gap:10px;color:#fff;font-weight:700;letter-spacing:.18em;font-size:18px;}
+  .logo .mark{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,var(--gold),var(--red));display:grid;place-items:center;font-size:15px;color:#fff;font-family:"Noto Serif JP",serif;}
+  .topbar .nav-cta{
+    background:var(--red);color:#fff;text-decoration:none;font-weight:700;
+    padding:9px 20px;border-radius:999px;font-size:14px;white-space:nowrap;
+    transition:transform .2s ease,box-shadow .2s ease;
+  }
+  .topbar .nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(208,2,27,.4);}
+  @media(max-width:560px){.topbar .nav-cta{display:none;}}
+
+  /* ===== HERO ===== */
+  .hero{
+    position:relative;
+    background:radial-gradient(1200px 600px at 80% -10%,rgba(240,165,0,.18),transparent 55%),
+               radial-gradient(900px 500px at -10% 110%,rgba(208,2,27,.16),transparent 55%),
+               linear-gradient(160deg,var(--navy) 0%,var(--navy-mid) 100%);
+    color:#fff;
+    padding:150px 0 100px;
+    overflow:hidden;
+  }
+  .hero::after{
+    content:"";position:absolute;inset:0;
+    background-image:radial-gradient(rgba(255,255,255,.055) 1px,transparent 1px);
+    background-size:26px 26px;opacity:.6;pointer-events:none;
+  }
+  .hero .wrap{position:relative;z-index:2;}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;}
+  @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:40px;}}
+  .badge-row{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px;}
+  .badge{
+    display:inline-flex;align-items:center;gap:7px;
+    background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);
+    padding:7px 15px;border-radius:999px;font-size:13px;font-weight:500;backdrop-filter:blur(6px);
+  }
+  .badge.free{background:var(--red);border-color:var(--red);font-weight:700;}
+  .badge .dot{width:7px;height:7px;border-radius:50%;background:var(--gold);}
+  .hero h1{
+    font-family:"Noto Serif JP",serif;
+    font-size:clamp(30px,5.4vw,52px);
+    font-weight:700;line-height:1.42;letter-spacing:.01em;margin-bottom:24px;
+  }
+  .hero h1 .hl{color:var(--gold);}
+  .hero h1 .hl-red{position:relative;white-space:nowrap;}
+  .hero h1 .hl-red::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:12px;background:rgba(208,2,27,.55);z-index:-1;border-radius:3px;}
+  .hero-sub{font-size:clamp(15px,2vw,18px);color:rgba(255,255,255,.86);margin-bottom:34px;font-weight:400;}
+  .hero-cta-group{display:flex;flex-wrap:wrap;gap:16px;align-items:center;}
+  .btn-primary{
+    display:inline-flex;align-items:center;gap:10px;
+    background:var(--red);color:#fff;text-decoration:none;
+    font-weight:700;font-size:17px;padding:18px 38px;border-radius:999px;
+    box-shadow:0 14px 30px rgba(208,2,27,.4);
+    transition:transform .2s ease,box-shadow .2s ease;
+    animation:pulse 2.6s infinite;
+  }
+  .btn-primary:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(208,2,27,.55);}
+  .btn-primary .arrow{transition:transform .2s ease;}
+  .btn-primary:hover .arrow{transform:translateX(4px);}
+  @keyframes pulse{0%{box-shadow:0 14px 30px rgba(208,2,27,.4);}50%{box-shadow:0 14px 44px rgba(208,2,27,.62);}100%{box-shadow:0 14px 30px rgba(208,2,27,.4);}}
+  .cta-note{font-size:13px;color:rgba(255,255,255,.7);}
+  /* hero info card */
+  .hero-card{
+    background:rgba(255,255,255,.07);
+    border:1px solid rgba(255,255,255,.16);
+    border-radius:20px;padding:30px;backdrop-filter:blur(10px);
+    box-shadow:0 20px 50px rgba(0,0,0,.25);
+  }
+  .hero-card h3{font-size:15px;letter-spacing:.16em;color:var(--gold);font-weight:700;margin-bottom:18px;text-align:center;}
+  .info-line{display:flex;gap:14px;padding:13px 0;border-bottom:1px dashed rgba(255,255,255,.18);}
+  .info-line:last-child{border-bottom:none;}
+  .info-line .k{flex:0 0 74px;font-size:13px;color:rgba(255,255,255,.6);font-weight:500;}
+  .info-line .v{font-size:15px;color:#fff;font-weight:500;}
+  .info-line .v b{color:var(--gold);}
+  .ph{background:rgba(240,165,0,.16);border-radius:5px;padding:0 5px;border:1px dashed rgba(240,165,0,.5);}
+
+  /* ===== MARQUEE-ish 16 chips ===== */
+  .chips-band{background:var(--navy);padding:26px 0;overflow:hidden;border-top:1px solid rgba(255,255,255,.08);}
+  .chips-track{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;}
+  .type-chip{font-size:13px;color:rgba(255,255,255,.82);border:1px solid rgba(255,255,255,.16);padding:6px 14px;border-radius:999px;white-space:nowrap;}
+  .type-chip.on{background:var(--gold);color:var(--navy);border-color:var(--gold);font-weight:700;}
+
+  /* ===== PROBLEM ===== */
+  .problem{background:var(--light-gray);padding:90px 0;}
+  .problem-head{text-align:center;max-width:760px;margin:0 auto 50px;}
+  .problem-head .big{font-family:"Noto Serif JP",serif;font-size:clamp(22px,3.6vw,32px);color:var(--navy);font-weight:700;line-height:1.55;}
+  .problem-head .big em{font-style:normal;color:var(--red);}
+  .worry-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  @media(max-width:820px){.worry-grid{grid-template-columns:1fr;}}
+  .worry{
+    background:#fff;border-radius:var(--radius);padding:28px 26px;box-shadow:var(--shadow-sm);
+    border-top:4px solid var(--red);position:relative;
+  }
+  .worry .q{font-size:40px;font-family:"Noto Serif JP",serif;color:rgba(208,2,27,.18);line-height:1;position:absolute;top:16px;right:20px;}
+  .worry h4{font-size:17px;color:var(--navy);font-weight:700;margin-bottom:10px;line-height:1.5;}
+  .worry p{font-size:14px;color:var(--dark-gray);}
+  .bridge{text-align:center;margin-top:46px;font-size:clamp(17px,2.6vw,22px);font-weight:700;color:var(--navy);}
+  .bridge .u{background:linear-gradient(transparent 60%,rgba(240,165,0,.5) 60%);padding:0 4px;}
+
+  /* ===== WHAT IS 16 ===== */
+  .about{padding:96px 0;background:#fff;}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center;margin-top:52px;}
+  @media(max-width:860px){.about-grid{grid-template-columns:1fr;gap:36px;}}
+  .about-copy h3{font-family:"Noto Serif JP",serif;font-size:24px;color:var(--navy);margin-bottom:18px;line-height:1.5;}
+  .about-copy p{margin-bottom:16px;color:var(--dark-gray);}
+  .about-copy .accent-num{color:var(--red);font-weight:900;font-size:1.15em;}
+  .matrix{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+  .cell{
+    aspect-ratio:1;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    font-size:12px;font-weight:700;text-align:center;padding:6px;color:var(--navy);
+    background:var(--light-gray);border:1px solid #e3e8ef;transition:transform .3s ease,box-shadow .3s ease;
+  }
+  .cell:hover{transform:translateY(-4px);box-shadow:var(--shadow-sm);}
+  .cell.fit{background:linear-gradient(150deg,var(--navy),var(--navy-mid));color:#fff;border-color:transparent;position:relative;overflow:hidden;}
+  .cell.fit::after{content:"協会向き";position:absolute;bottom:0;left:0;right:0;font-size:9px;background:var(--gold);color:var(--navy);padding:2px 0;font-weight:700;letter-spacing:.05em;}
+  .cell .n{font-size:10px;color:var(--mid-gray);font-weight:500;margin-bottom:2px;}
+  .cell.fit .n{color:rgba(255,255,255,.6);}
+  .matrix-note{font-size:12px;color:var(--mid-gray);margin-top:14px;text-align:center;}
+
+  /* ===== GET (benefits) ===== */
+  .benefits{padding:96px 0;background:linear-gradient(180deg,var(--light-gray),#fff);}
+  .ben-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px;}
+  @media(max-width:860px){.ben-grid{grid-template-columns:1fr;}}
+  .ben{background:#fff;border-radius:var(--radius);padding:34px 28px;box-shadow:var(--shadow-sm);text-align:center;transition:transform .3s ease,box-shadow .3s ease;}
+  .ben:hover{transform:translateY(-6px);box-shadow:var(--shadow);}
+  .ben .ic{width:64px;height:64px;border-radius:18px;margin:0 auto 20px;display:grid;place-items:center;background:linear-gradient(150deg,var(--navy),var(--navy-light));}
+  .ben .ic svg{width:30px;height:30px;stroke:var(--gold);fill:none;stroke-width:2;}
+  .ben h4{font-size:19px;color:var(--navy);font-weight:700;margin-bottom:12px;}
+  .ben p{font-size:14.5px;color:var(--dark-gray);}
+  .ben .tag{display:inline-block;font-size:11px;letter-spacing:.1em;color:var(--red);font-weight:700;margin-bottom:8px;}
+
+  /* ===== FLOW ===== */
+  .flow{padding:96px 0;background:var(--navy);color:#fff;}
+  .flow h2.sec-title{color:#fff;}
+  .flow .sec-lead{color:var(--gold);}
+  .steps{max-width:760px;margin:52px auto 0;position:relative;}
+  .steps::before{content:"";position:absolute;left:27px;top:14px;bottom:14px;width:2px;background:rgba(255,255,255,.18);}
+  .step{display:flex;gap:24px;padding-bottom:34px;position:relative;}
+  .step:last-child{padding-bottom:0;}
+  .step .num{flex:0 0 56px;height:56px;border-radius:50%;background:linear-gradient(150deg,var(--gold),var(--red));display:grid;place-items:center;font-family:"Noto Serif JP",serif;font-size:22px;font-weight:700;color:#fff;z-index:2;box-shadow:0 8px 18px rgba(0,0,0,.3);}
+  .step .body{padding-top:6px;}
+  .step .body .t{font-size:12px;color:var(--gold);letter-spacing:.12em;font-weight:700;margin-bottom:4px;}
+  .step .body h4{font-size:19px;font-weight:700;margin-bottom:8px;}
+  .step .body p{font-size:14.5px;color:rgba(255,255,255,.78);}
+
+  /* ===== FOR WHOM ===== */
+  .whom{padding:96px 0;background:#fff;}
+  .whom-list{max-width:720px;margin:48px auto 0;display:grid;gap:16px;}
+  .whom-item{display:flex;gap:16px;align-items:flex-start;background:var(--light-gray);border-radius:14px;padding:20px 24px;border-left:4px solid var(--gold);}
+  .whom-item .ck{flex:0 0 26px;height:26px;border-radius:50%;background:var(--green);display:grid;place-items:center;margin-top:2px;}
+  .whom-item .ck svg{width:15px;height:15px;stroke:#fff;stroke-width:3;fill:none;}
+  .whom-item p{font-size:15.5px;color:var(--navy);font-weight:500;}
+
+  /* ===== HOST ===== */
+  .host{padding:90px 0;background:var(--light-gray);}
+  .host-card{max-width:900px;margin:44px auto 0;background:#fff;border-radius:20px;box-shadow:var(--shadow);padding:44px;display:grid;grid-template-columns:auto 1fr;gap:36px;align-items:center;}
+  @media(max-width:720px){.host-card{grid-template-columns:1fr;text-align:center;padding:32px 26px;}}
+  .host-badge{width:150px;height:150px;border-radius:24px;background:linear-gradient(150deg,var(--navy),var(--navy-mid));display:grid;place-items:center;margin:0 auto;}
+  .host-badge .mk{font-family:"Noto Serif JP",serif;color:#fff;font-size:44px;letter-spacing:.1em;}
+  .host-badge .mk b{color:var(--gold);}
+  .host-body h3{font-size:22px;color:var(--navy);font-family:"Noto Serif JP",serif;margin-bottom:6px;}
+  .host-body .role{font-size:13px;color:var(--red);font-weight:700;letter-spacing:.08em;margin-bottom:14px;}
+  .host-body p{font-size:14.5px;color:var(--dark-gray);}
+
+  /* ===== OUTLINE ===== */
+  .outline{padding:90px 0;background:#fff;}
+  .outline-table{max-width:760px;margin:44px auto 0;border-radius:16px;overflow:hidden;box-shadow:var(--shadow-sm);border:1px solid #e3e8ef;}
+  .orow{display:grid;grid-template-columns:170px 1fr;border-bottom:1px solid #e9edf3;}
+  .orow:last-child{border-bottom:none;}
+  .orow .k{background:var(--navy);color:#fff;font-weight:700;font-size:14px;padding:18px 22px;display:flex;align-items:center;letter-spacing:.05em;}
+  .orow .v{padding:18px 22px;font-size:15px;color:var(--dark-gray);display:flex;align-items:center;flex-wrap:wrap;gap:6px;}
+  .orow .v b{color:var(--navy);}
+  .price-free{color:var(--red);font-weight:900;font-size:20px;font-family:"Noto Serif JP",serif;}
+  @media(max-width:560px){.orow{grid-template-columns:110px 1fr;}.orow .k{padding:14px;font-size:13px;}.orow .v{padding:14px;font-size:14px;}}
+
+  /* ===== FAQ ===== */
+  .faq{padding:90px 0;background:var(--light-gray);}
+  .faq-list{max-width:760px;margin:44px auto 0;display:grid;gap:14px;}
+  .qa{background:#fff;border-radius:14px;box-shadow:var(--shadow-sm);overflow:hidden;}
+  .qa summary{list-style:none;cursor:pointer;padding:22px 26px;font-weight:700;color:var(--navy);font-size:16px;display:flex;justify-content:space-between;gap:16px;align-items:center;}
+  .qa summary::-webkit-details-marker{display:none;}
+  .qa summary .qmark{color:var(--red);font-family:"Noto Serif JP",serif;margin-right:10px;}
+  .qa summary .plus{flex:0 0 22px;height:22px;position:relative;transition:transform .3s ease;}
+  .qa summary .plus::before,.qa summary .plus::after{content:"";position:absolute;background:var(--gold);border-radius:2px;}
+  .qa summary .plus::before{top:10px;left:0;right:0;height:2px;}
+  .qa summary .plus::after{left:10px;top:0;bottom:0;width:2px;}
+  .qa[open] summary .plus{transform:rotate(45deg);}
+  .qa .a{padding:0 26px 24px;font-size:14.5px;color:var(--dark-gray);}
+
+  /* ===== FINAL CTA ===== */
+  .final{
+    padding:100px 0;color:#fff;text-align:center;position:relative;overflow:hidden;
+    background:radial-gradient(900px 500px at 50% -20%,rgba(240,165,0,.22),transparent 60%),
+               linear-gradient(160deg,var(--navy),var(--navy-mid));
+  }
+  .final h2{font-family:"Noto Serif JP",serif;font-size:clamp(26px,4.6vw,42px);font-weight:700;line-height:1.45;margin-bottom:18px;}
+  .final h2 .hl{color:var(--gold);}
+  .final p{color:rgba(255,255,255,.85);margin-bottom:12px;font-size:16px;}
+  .final .cap{font-size:14px;color:var(--gold);font-weight:700;margin-bottom:30px;letter-spacing:.05em;}
+  .final .btn-primary{font-size:19px;padding:20px 48px;}
+  .final .mini{margin-top:20px;font-size:13px;color:rgba(255,255,255,.65);}
+
+  /* ===== FOOTER ===== */
+  footer{background:#071427;color:rgba(255,255,255,.6);padding:40px 0;text-align:center;font-size:13px;}
+  footer .logo{justify-content:center;margin-bottom:14px;}
+  footer a{color:var(--gold);text-decoration:none;}
+
+  /* sticky mobile CTA */
+  .mobile-cta{position:fixed;bottom:0;left:0;right:0;z-index:60;padding:12px 16px;background:rgba(11,31,58,.97);box-shadow:0 -6px 20px rgba(0,0,0,.25);display:none;}
+  .mobile-cta a{display:block;text-align:center;background:var(--red);color:#fff;text-decoration:none;font-weight:700;padding:15px;border-radius:12px;}
+  @media(max-width:640px){.mobile-cta{display:block;}body{padding-bottom:74px;}}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar" id="topbar">
+  <div class="logo"><span class="mark">自</span>JINEN</div>
+  <a href="#apply" class="nav-cta">無料で参加する</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="badge-row">
+          <span class="badge free"><span class="dot" style="background:#fff"></span>参加費 無料</span>
+          <span class="badge"><span class="dot"></span>オンライン開催</span>
+          <span class="badge"><span class="dot"></span>これから協会を立ち上げたい方へ</span>
+        </div>
+        <h1>その協会、<span class="hl-red">つくった後</span>に<br>続きますか？<br><span class="hl">16の型</span>で、続く協会の設計図を。</h1>
+        <p class="hero-sub">「想いはある。でも、どう仲間を集め、どう続けていけばいいのか分からない」——そんなあなたへ。JINENの<b style="color:#fff">コミュニティ16分類</b>で、あなたの協会が“らしく続く”型を、60分で体験する無料オンラインセミナーです。</p>
+        <div class="hero-cta-group">
+          <a href="#apply" class="btn-primary">無料で席を確保する <span class="arrow">→</span></a>
+          <span class="cta-note">＼ 所要 <span class="ph">約90分</span>・カメラOFF参加OK ／</span>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h3>SEMINAR INFO</h3>
+        <div class="info-line"><span class="k">日時</span><span class="v"><b><span class="ph">2026/●●/●●（●）</span></b> <span class="ph">20:00〜21:30</span></span></div>
+        <div class="info-line"><span class="k">形式</span><span class="v">オンライン（Zoom）</span></div>
+        <div class="info-line"><span class="k">参加費</span><span class="v"><b>無料</b></span></div>
+        <div class="info-line"><span class="k">定員</span><span class="v"><span class="ph">●●名</span>（先着）</span></div>
+        <div class="info-line"><span class="k">対象</span><span class="v">これから協会を立ち上げたい方</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 16 CHIPS BAND -->
+<div class="chips-band">
+  <div class="wrap">
+    <p style="text-align:center;color:rgba(255,255,255,.55);font-size:12px;letter-spacing:.16em;margin-bottom:16px;">JINEN コミュニティ 16分類</p>
+    <div class="chips-track" id="chips"></div>
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<section class="problem">
+  <div class="wrap">
+    <div class="problem-head reveal">
+      <p class="sec-lead">SUCH A WORRY</p>
+      <p class="big">協会は、<em>立ち上げるより「続ける」ほうが難しい。</em><br>その壁に、ひとりでぶつかっていませんか。</p>
+    </div>
+    <div class="worry-grid">
+      <div class="worry reveal"><span class="q">Q</span><h4>誰を、どう集めればいい？</h4><p>理念に共感してくれる仲間の集め方が分からず、最初の一歩が踏み出せない。</p></div>
+      <div class="worry reveal"><span class="q">Q</span><h4>作っても、続く気がしない</h4><p>会員が増えても“幽霊会員”ばかり。総会だけの形骸化した団体になりそうで不安。</p></div>
+      <div class="worry reveal"><span class="q">Q</span><h4>自分の協会の“型”が分からない</h4><p>他団体の真似をしても、なぜかしっくりこない。自分たちらしい運営の軸が見えない。</p></div>
+    </div>
+    <p class="bridge reveal">その迷いは、<span class="u">「協会の型」を知らない</span>だけかもしれません。</p>
+  </div>
+</section>
+
+<!-- ABOUT 16 -->
+<section class="about">
+  <div class="wrap">
+    <p class="sec-lead reveal">WHAT IS 16 CLASSIFICATIONS</p>
+    <h2 class="sec-title reveal">コミュニティには、<br>16の「型」がある。</h2>
+    <div class="about-grid">
+      <div class="about-copy reveal">
+        <h3>あなたの協会が、<br>どの型で輝くのかを知る。</h3>
+        <p>JINENは、あらゆるコミュニティを<span class="accent-num">16</span>のタイプに分類する独自フレームワークを持っています。革新型・発展型・互助型・熱狂型・伝統型…それぞれに、続く仕組みも、メンバーへの声かけも、盛り上がる“お祭り”の形も違います。</p>
+        <p>大切なのは、流行りの運営を真似ることではなく、<b style="color:var(--navy)">あなたの協会に合った型を選ぶこと</b>。特に協会・団体には向いている6つの型があります。このセミナーでは、その全体像を体験できます。</p>
+      </div>
+      <div class="reveal">
+        <div class="matrix" id="matrix"></div>
+        <p class="matrix-note">※ 濃色は「協会に特に向いている6タイプ」。当日はこの見取り図を使って解説します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="benefits">
+  <div class="wrap">
+    <p class="sec-lead reveal">WHAT YOU GET</p>
+    <h2 class="sec-title reveal">このセミナーで<br>持ち帰れる3つのこと</h2>
+    <div class="ben-grid">
+      <div class="ben reveal">
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <span class="tag">EXPERIENCE</span>
+        <h4>16分類の全体像を体験</h4>
+        <p>16の型がひと目でわかる見取り図で、コミュニティ設計の“地図”を手に入れます。専門用語なしで、はじめての方でも直感的に理解できます。</p>
+      </div>
+      <div class="ben reveal">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l2.5 6H21l-5 4 2 7-6-4-6 4 2-7-5-4h6.5z"/></svg></div>
+        <span class="tag">DIAGNOSIS</span>
+        <h4>自分の協会の“型”のヒント</h4>
+        <p>「立ち上げたい協会は、どの型に近いのか」。当日のワークで、あなたの構想に合いそうなタイプの当たりをつけられます。</p>
+      </div>
+      <div class="ben reveal">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 12h16M13 5l7 7-7 7"/></svg></div>
+        <span class="tag">NEXT STEP</span>
+        <h4>続く協会をつくる第一歩</h4>
+        <p>立ち上げ〜定着〜自走まで、協会が育つ道筋の考え方を持ち帰り。「何から始めるか」が具体的に見えてきます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FLOW -->
+<section class="flow">
+  <div class="wrap">
+    <p class="sec-lead reveal">SEMINAR FLOW</p>
+    <h2 class="sec-title reveal">当日の流れ</h2>
+    <div class="steps">
+      <div class="step reveal"><div class="num">1</div><div class="body"><div class="t">OPENING｜約10分</div><h4>なぜ協会は「続かない」のか</h4><p>立ち上げでつまずく典型パターンを整理。今日のゴールを共有します。</p></div></div>
+      <div class="step reveal"><div class="num">2</div><div class="body"><div class="t">MAIN｜約40分</div><h4>コミュニティ16分類 徹底体験</h4><p>16の型の見取り図をもとに、協会に向いた型の特徴・続く仕組み・お祭り設計を具体例で解説します。</p></div></div>
+      <div class="step reveal"><div class="num">3</div><div class="body"><div class="t">WORK｜約25分</div><h4>あなたの協会は何型？ミニ診断ワーク</h4><p>いくつかの質問に答えながら、あなたの構想に近い型の当たりをつけます。</p></div></div>
+      <div class="step reveal"><div class="num">4</div><div class="body"><div class="t">CLOSING｜約15分</div><h4>次の一歩と質疑応答</h4><p>立ち上げに向けた進め方を整理。その場で疑問を解消できます。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOR WHOM -->
+<section class="whom">
+  <div class="wrap">
+    <p class="sec-lead reveal">FOR YOU</p>
+    <h2 class="sec-title reveal">こんな方に来てほしい</h2>
+    <div class="whom-list">
+      <div class="whom-item reveal"><span class="ck"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span><p>自分の専門性や理念を軸に、これから協会・団体を立ち上げたい</p></div>
+      <div class="whom-item reveal"><span class="ck"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span><p>会員が集まり、長く続くコミュニティのつくり方を知りたい</p></div>
+      <div class="whom-item reveal"><span class="ck"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span><p>すでに構想はあるが、運営の“型”や設計に自信が持てない</p></div>
+      <div class="whom-item reveal"><span class="ck"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span><p>資格・業界・趣味など、仲間とともに価値を広げる場をつくりたい</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOST -->
+<section class="host">
+  <div class="wrap">
+    <p class="sec-lead reveal">HOST</p>
+    <h2 class="sec-title reveal">主催について</h2>
+    <div class="host-card reveal">
+      <div class="host-badge"><span class="mk">自<b>然</b></span></div>
+      <div class="host-body">
+        <h3>JINEN株式会社</h3>
+        <p class="role">コミュニティ・デザイン ／ 講師：<span class="ph">●● ●●</span></p>
+        <p>JINENは「コミュニティ16分類」フレームワークを軸に、協会・業界団体・職能団体のコミュニティ設計と運営を支援してきました。数多くの団体の立ち上げ・活性化に伴走してきた知見を、この体験セミナーに凝縮してお届けします。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUTLINE -->
+<section class="outline">
+  <div class="wrap">
+    <p class="sec-lead reveal">OUTLINE</p>
+    <h2 class="sec-title reveal">開催概要</h2>
+    <div class="outline-table reveal">
+      <div class="orow"><div class="k">セミナー名</div><div class="v"><span class="ph">【無料】協会づくりが分かる 16分類 体験セミナー</span></div></div>
+      <div class="orow"><div class="k">日時</div><div class="v"><b><span class="ph">2026年●月●日（●）</span></b><span class="ph">20:00〜21:30</span>（開場 10分前）</div></div>
+      <div class="orow"><div class="k">開催形式</div><div class="v">オンライン（Zoom）／カメラOFF・ニックネーム参加OK</div></div>
+      <div class="orow"><div class="k">参加費</div><div class="v"><span class="price-free">無料</span></div></div>
+      <div class="orow"><div class="k">定員</div><div class="v"><span class="ph">●●名</span>（先着順・定員に達し次第締切）</div></div>
+      <div class="orow"><div class="k">対象</div><div class="v">これから協会・団体を立ち上げたい個人の方</div></div>
+      <div class="orow"><div class="k">お申込み</div><div class="v">下記ボタンの専用フォームから（所要1分）</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="wrap">
+    <p class="sec-lead reveal">FAQ</p>
+    <h2 class="sec-title reveal">よくあるご質問</h2>
+    <div class="faq-list">
+      <details class="qa reveal"><summary><span><span class="qmark">Q.</span>まだ構想段階で、何も決まっていなくても大丈夫ですか？</span><span class="plus"></span></summary><div class="a">はい、大歓迎です。むしろ「これから考えたい」という段階の方にこそ、16分類の地図が役立ちます。専門知識も事前準備も不要です。</div></details>
+      <details class="qa reveal"><summary><span><span class="qmark">Q.</span>顔出しや発言は必須ですか？</span><span class="plus"></span></summary><div class="a">いいえ。カメラOFF・ニックネームでのご参加も可能です。ワークも手元で進められるので、気軽にご参加ください。</div></details>
+      <details class="qa reveal"><summary><span><span class="qmark">Q.</span>本当に無料ですか？後から費用はかかりませんか？</span><span class="plus"></span></summary><div class="a">参加費は完全無料です。当日にJINENのサポートメニューをご案内する場合がありますが、その場での申込を強制することは一切ありません。</div></details>
+      <details class="qa reveal"><summary><span><span class="qmark">Q.</span>途中参加・途中退出はできますか？</span><span class="plus"></span></summary><div class="a">可能です。ただし内容が連続しているため、できるだけ通しでのご参加をおすすめします。アーカイブの有無は<span class="ph">当日ご案内</span>します。</div></details>
+      <details class="qa reveal"><summary><span><span class="qmark">Q.</span>申し込み後の流れは？</span><span class="plus"></span></summary><div class="a">フォーム送信後、ご登録のメールアドレスにZoomの参加URLをお送りします。当日はそのURLからご入室ください。</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final" id="apply">
+  <div class="wrap">
+    <h2>想いを、<span class="hl">続く協会</span>に。<br>その設計図を、ここから。</h2>
+    <p>次の一歩を、迷いのまま止めておく必要はありません。</p>
+    <p class="cap">＼ 参加費無料・定員に達し次第締切 ／</p>
+    <a href="#" id="apply-btn" class="btn-primary">無料で参加を申し込む <span class="arrow">→</span></a>
+    <p class="mini">※ ボタンから申込フォームへ移動します（所要約1分）</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="logo"><span class="mark">自</span>JINEN</div>
+    <p>JINEN株式会社｜コミュニティ16分類で、続く組織づくりを。</p>
+    <p style="margin-top:8px;">&copy; 2026 JINEN Inc. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- STICKY MOBILE CTA -->
+<div class="mobile-cta"><a href="#apply">無料で席を確保する →</a></div>
+
+<script>
+  // 16 type data
+  const types=[
+    {n:"革新型",fit:false},{n:"伝統型",fit:true},{n:"保守型",fit:false},{n:"奮闘型",fit:true},
+    {n:"発展型",fit:true},{n:"葛藤型",fit:false},{n:"成長型",fit:true},{n:"強欲型",fit:false},
+    {n:"互助型",fit:true},{n:"分離型",fit:false},{n:"逃避型",fit:false},{n:"緊張型",fit:false},
+    {n:"洗脳型",fit:false},{n:"悲観型",fit:false},{n:"傲慢型",fit:false},{n:"熱狂型",fit:true}
+  ];
+  // chips band
+  const chips=document.getElementById('chips');
+  types.forEach(t=>{const s=document.createElement('span');s.className='type-chip'+(t.fit?' on':'');s.textContent=t.n;chips.appendChild(s);});
+  // matrix
+  const mx=document.getElementById('matrix');
+  types.forEach((t,i)=>{const c=document.createElement('div');c.className='cell'+(t.fit?' fit':'');c.innerHTML='<span class="n">'+String(i+1).padStart(2,'0')+'</span>'+t.n;mx.appendChild(c);});
+
+  // topbar scroll
+  const tb=document.getElementById('topbar');
+  window.addEventListener('scroll',()=>{tb.classList.toggle('scrolled',window.scrollY>40);});
+
+  // reveal on scroll
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}});},{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // ===== 申込フォームURL（確定後にここを差し替え）=====
+  const FORM_URL="#"; // TODO: 申込フォームのURLに置き換え
+  document.querySelectorAll('a[href="#apply"]').forEach(a=>{});
+  const applyBtn=document.getElementById('apply-btn');
+  if(FORM_URL && FORM_URL!=="#"){
+    applyBtn.href=FORM_URL; applyBtn.target="_blank"; applyBtn.rel="noopener";
+    document.querySelectorAll('.nav-cta,.mobile-cta a').forEach(a=>{a.href=FORM_URL;a.target="_blank";a.rel="noopener";});
+  }
+</script>
+</body>
+</html>
