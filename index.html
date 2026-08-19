@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>【無料オンライン】コミュニティ活用セミナー｜“人数”も“課金”も正解じゃない。コミュニティ16分類への入り口</title>
-<meta name="description" content="コミュニティを作った・多くに所属した方へ。避けたい型、組織との違い、事例、4象限、16タイプ診断まで。型ごとに必要なもの・稼ぎ方が違うと気づく無料オンラインセミナー。">
-<meta property="og:title" content="コミュニティ活用セミナー｜“常識”を手放す、コミュニティ16分類への入り口">
-<meta property="og:description" content="「人数」「課金」の常識を疑う。事例で気づく、コミュニティの新しい可能性。無料オンライン。">
+<title>【無料オンライン】コミュニティ活用セミナー｜なぜ、あのコミュニティは消滅していったのか？</title>
+<meta name="description" content="コミュニティを作った・多くに所属した方へ。伸びる型と消える型、組織との違い、事例、4象限まで。まずはコミュニティの理解から始める無料オンラインセミナー。">
+<meta property="og:title" content="コミュニティ活用セミナー｜なぜ、あのコミュニティは消滅していったのか？">
+<meta property="og:description" content="伸びる型と消える型を、事例で見わける。まずはコミュニティの理解から。無料オンライン。">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,6 +54,7 @@
   .hero h1 .hl{color:var(--gold);}
   .hero h1 .hl-red{position:relative;white-space:nowrap;}
   .hero h1 .hl-red::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:12px;background:rgba(208,2,27,.55);z-index:-1;border-radius:3px;}
+  .hero-lead{font-size:clamp(16px,2.4vw,21px);font-weight:700;color:var(--gold);margin-bottom:16px;letter-spacing:.02em;}
   .hero-sub{font-size:clamp(15px,2vw,18px);color:rgba(255,255,255,.86);margin-bottom:34px;font-weight:400;}
   .hero-cta-group{display:flex;flex-wrap:wrap;gap:16px;align-items:center;}
   .btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--red);color:#fff;text-decoration:none;font-weight:700;font-size:17px;padding:18px 38px;border-radius:999px;box-shadow:0 14px 30px rgba(208,2,27,.4);transition:transform .2s ease,box-shadow .2s ease;animation:pulse 2.6s infinite;}
@@ -91,18 +92,8 @@
   .bridge{text-align:center;margin-top:46px;font-size:clamp(17px,2.6vw,22px);font-weight:700;color:var(--navy);}
   .bridge .u{background:linear-gradient(transparent 60%,rgba(240,165,0,.5) 60%);padding:0 4px;}
 
-  /* BAD TYPES */
-  .badtypes{padding:90px 0;background:#fff;}
-  .badtypes-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:840px;margin:44px auto 0;}
-  @media(max-width:720px){.badtypes-grid{grid-template-columns:1fr;}}
-  .badtype{background:var(--light-gray);border-radius:16px;padding:30px;box-shadow:var(--shadow-sm);border-top:4px solid var(--red);}
-  .badtype .warn{display:inline-block;font-size:12px;font-weight:700;color:#fff;background:var(--red);border-radius:999px;padding:4px 12px;margin-bottom:12px;}
-  .badtype h4{font-size:20px;color:var(--navy);font-family:"Noto Serif JP",serif;margin-bottom:10px;}
-  .badtype p{font-size:14.5px;color:var(--dark-gray);}
-  .badtypes-note{text-align:center;color:var(--mid-gray);font-size:13px;margin-top:22px;}
-
   /* COMPARE */
-  .compare-sec{padding:90px 0;background:var(--light-gray);}
+  .compare-sec{padding:90px 0;background:#fff;}
   .compare-wrap{max-width:820px;margin:44px auto 0;border-radius:16px;overflow:hidden;box-shadow:var(--shadow-sm);border:1px solid #e3e8ef;background:#fff;}
   .compare{width:100%;border-collapse:collapse;font-size:15px;}
   .compare th,.compare td{padding:16px 18px;text-align:left;border-bottom:1px solid #e9edf3;}
@@ -115,7 +106,7 @@
   @media(max-width:560px){.compare th,.compare td{padding:12px;font-size:13px;}.compare td.axis{width:82px;}}
 
   /* POSSIBILITY */
-  .possib-sec{padding:96px 0;background:#fff;}
+  .possib-sec{padding:96px 0;background:var(--light-gray);}
   .possib-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:900px;margin:44px auto 0;}
   @media(max-width:760px){.possib-grid{grid-template-columns:1fr;}}
   .possib-col{background:#fff;border-radius:16px;padding:32px;box-shadow:var(--shadow-sm);border:1px solid #eef1f5;}
@@ -132,17 +123,19 @@
   .possib-col.ope li::before{background:var(--green);}
 
   /* CASES */
-  .cases-sec{padding:96px 0;background:linear-gradient(180deg,var(--light-gray),#fff);}
+  .cases-sec{padding:96px 0;background:#fff;}
   .cases-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:900px;margin:44px auto 0;}
   @media(max-width:760px){.cases-grid{grid-template-columns:1fr;}}
   .case{background:linear-gradient(160deg,var(--navy),var(--navy-mid));color:#fff;border-radius:16px;padding:32px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
   .case .type-badge{display:inline-block;font-size:12px;font-weight:700;color:var(--navy);background:var(--gold);border-radius:999px;padding:4px 14px;margin-bottom:14px;}
   .case h4{font-size:20px;font-family:"Noto Serif JP",serif;margin-bottom:10px;}
   .case p{font-size:14px;color:rgba(255,255,255,.82);}
+  .case.avoid{background:linear-gradient(160deg,#4a121b,#2a0c12);}
+  .case.avoid .type-badge{background:var(--red);color:#fff;}
   .case-note{text-align:center;color:var(--mid-gray);font-size:12px;margin-top:18px;}
 
   /* QUADRANT */
-  .quad-sec{padding:96px 0;background:#fff;}
+  .quad-sec{padding:96px 0;background:var(--light-gray);}
   .quad-wrap{max-width:720px;margin:44px auto 0;}
   .quad{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
   .qcell{border-radius:16px;padding:26px;color:#fff;min-height:150px;display:flex;flex-direction:column;justify-content:center;}
@@ -155,24 +148,6 @@
   .qcell.q4{background:linear-gradient(150deg,var(--navy-light),#3a5a86);}
   .qcell.q2 .qt{background:rgba(11,31,58,.15);}
   .quad-note{text-align:center;color:var(--mid-gray);font-size:12px;margin-top:16px;}
-
-  /* 16 TYPES */
-  .about{padding:96px 0;background:var(--light-gray);}
-  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center;margin-top:52px;}
-  @media(max-width:860px){.about-grid{grid-template-columns:1fr;gap:36px;}}
-  .about-copy h3{font-family:"Noto Serif JP",serif;font-size:24px;color:var(--navy);margin-bottom:18px;line-height:1.5;}
-  .about-copy p{margin-bottom:16px;color:var(--dark-gray);}
-  .about-copy .accent-num{color:var(--red);font-weight:900;font-size:1.15em;}
-  .matrix{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
-  .cell{aspect-ratio:1;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:12px;font-weight:700;text-align:center;padding:6px;color:var(--navy);background:#fff;border:1px solid #e3e8ef;transition:transform .3s ease,box-shadow .3s ease;}
-  .cell:hover{transform:translateY(-4px);box-shadow:var(--shadow-sm);}
-  .cell.fit{background:linear-gradient(150deg,var(--navy),var(--navy-mid));color:#fff;border-color:transparent;position:relative;overflow:hidden;}
-  .cell.fit::after{content:"良い型";position:absolute;bottom:0;left:0;right:0;font-size:9px;background:var(--gold);color:var(--navy);padding:2px 0;font-weight:700;letter-spacing:.05em;}
-  .cell.bad{background:#fff;border:1.5px solid rgba(208,2,27,.55);color:var(--red);position:relative;overflow:hidden;}
-  .cell.bad::after{content:"避けたい";position:absolute;bottom:0;left:0;right:0;font-size:9px;background:var(--red);color:#fff;padding:2px 0;font-weight:700;letter-spacing:.05em;}
-  .cell .n{font-size:10px;color:var(--mid-gray);font-weight:500;margin-bottom:2px;}
-  .cell.fit .n{color:rgba(255,255,255,.6);}
-  .matrix-note{font-size:12px;color:var(--mid-gray);margin-top:14px;text-align:center;}
 
   /* FLOW / AGENDA */
   .flow{padding:96px 0;background:var(--navy);color:#fff;}
@@ -222,25 +197,10 @@
   .price-free{color:var(--red);font-weight:900;font-size:20px;font-family:"Noto Serif JP",serif;}
   @media(max-width:560px){.orow{grid-template-columns:110px 1fr;}.orow .k{padding:14px;font-size:13px;}.orow .v{padding:14px;font-size:14px;}}
 
-  /* NEXT STEP / PRICE */
-  .next-sec{padding:96px 0;background:var(--light-gray);}
-  .price-block{max-width:760px;margin:44px auto 0;background:linear-gradient(160deg,var(--navy),var(--navy-mid));border-radius:20px;padding:48px 40px;color:#fff;text-align:center;box-shadow:var(--shadow);position:relative;overflow:hidden;}
-  .price-block::after{content:"";position:absolute;inset:0;background:radial-gradient(600px 300px at 50% -20%,rgba(240,165,0,.2),transparent 60%);pointer-events:none;}
-  .price-block > *{position:relative;z-index:2;}
-  .price-block .lbl{font-size:13px;letter-spacing:.14em;color:var(--gold);font-weight:700;margin-bottom:10px;}
-  .price-block h3{font-family:"Noto Serif JP",serif;font-size:26px;margin-bottom:14px;}
-  .price-block .price{font-size:44px;font-weight:900;font-family:"Noto Serif JP",serif;color:var(--gold);line-height:1.1;}
-  .price-block .price small{font-size:16px;color:rgba(255,255,255,.8);font-weight:500;}
-  .price-block .meta{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;margin:16px 0 18px;font-size:14px;color:rgba(255,255,255,.88);}
-  .price-block .meta span{display:inline-flex;align-items:center;gap:6px;}
-  .price-block .meta b{color:var(--gold);}
-  .price-block p.desc{font-size:14.5px;color:rgba(255,255,255,.85);max-width:580px;margin:0 auto;}
-  .price-block .free-first{margin-top:22px;font-size:14px;color:var(--gold);font-weight:700;}
-
   /* FAQ */
-  .faq{padding:90px 0;background:#fff;}
+  .faq{padding:90px 0;background:var(--light-gray);}
   .faq-list{max-width:760px;margin:44px auto 0;display:grid;gap:14px;}
-  .qa{background:var(--light-gray);border-radius:14px;box-shadow:var(--shadow-sm);overflow:hidden;}
+  .qa{background:#fff;border-radius:14px;box-shadow:var(--shadow-sm);overflow:hidden;}
   .qa summary{list-style:none;cursor:pointer;padding:22px 26px;font-weight:700;color:var(--navy);font-size:16px;display:flex;justify-content:space-between;gap:16px;align-items:center;}
   .qa summary::-webkit-details-marker{display:none;}
   .qa summary .qmark{color:var(--red);font-family:"Noto Serif JP",serif;margin-right:10px;}
@@ -286,8 +246,9 @@
           <span class="badge"><span class="dot"></span>オンライン開催</span>
           <span class="badge"><span class="dot"></span>コミュニティ活用セミナー</span>
         </div>
-        <h1><span class="hl-red">「人数」も「課金」も</span>、<br>正解じゃない。<br>コミュニティには、<span class="hl">16の型</span>がある。</h1>
-        <p class="hero-sub">コミュニティを作った方・いくつも関わってきた方へ。「もっと人を集めなきゃ」「何かで課金しなきゃ」——その“常識”を、いちど手放してみませんか。避けたい型、組織との違い、事例、4象限、16タイプ診断まで。<b style="color:#fff">型ごとに“必要なもの”も“稼ぎ方”も違う</b>と、事例で気づく60分です。</p>
+        <h1>なぜ、あの<span class="hl-red">コミュニティ</span>は<br><span class="hl">消滅</span>していったのか？</h1>
+        <p class="hero-lead">まずは、コミュニティの“理解”から始めよう。</p>
+        <p class="hero-sub">コミュニティを作った方・いくつも関わってきた方へ。伸びていく型もあれば、静かに消えていく型もある。「人数」「課金」の常識を手放し、<b style="color:#fff">避けたい型と良い型を、事例で見わける</b>60分です。</p>
         <div class="hero-cta-group">
           <a href="#apply" class="btn-primary">無料で席を確保する <span class="arrow">→</span></a>
           <span class="cta-note">＼ 所要 約60分・カメラON でのご参加をお願いします ／</span>
@@ -329,27 +290,6 @@
   </div>
 </section>
 
-<!-- 悪い2つのタイプ -->
-<section class="badtypes">
-  <div class="wrap">
-    <p class="sec-lead reveal">WATCH OUT</p>
-    <h2 class="sec-title reveal">実は、コミュニティには<br>“避けたい型”がある。</h2>
-    <div class="badtypes-grid">
-      <div class="badtype reveal">
-        <span class="warn">避けたい型 01</span>
-        <h4>洗脳型</h4>
-        <p>一体感は強いのに、外を拒んで閉じていく。依存が生まれ、批判や異論を許さない——気づかぬうちに危うさをはらむ型です。</p>
-      </div>
-      <div class="badtype reveal">
-        <span class="warn">避けたい型 02</span>
-        <h4>悲観型</h4>
-        <p>不安や無力感を分かち合ううちに、前向きな変化が生まれにくくなる。共感はあっても、成長や希望につながりにくい型です。</p>
-      </div>
-    </div>
-    <p class="badtypes-note reveal">あなたのコミュニティが、知らぬ間にこの型に近づいていないか？——見分け方は当日お話しします。</p>
-  </div>
-</section>
-
 <!-- 組織とコミュニティの違い -->
 <section class="compare-sec">
   <div class="wrap">
@@ -367,7 +307,7 @@
         </tbody>
       </table>
     </div>
-    <p class="matrix-note reveal">※ 組織のやり方をそのまま持ち込むと、コミュニティはうまく動きません。</p>
+    <p class="quad-note reveal">※ 組織のやり方をそのまま持ち込むと、コミュニティはうまく動きません。</p>
   </div>
 </section>
 
@@ -401,20 +341,30 @@
 <section class="cases-sec">
   <div class="wrap">
     <p class="sec-lead reveal">CASE STUDY</p>
-    <h2 class="sec-title reveal">事例で見る、「型」のちがい。</h2>
+    <h2 class="sec-title reveal">「伸びた型」と、「消えた型」。</h2>
     <div class="cases-grid">
       <div class="case reveal">
         <span class="type-badge">成長型</span>
-        <h4>エナジャイズ／AOL</h4>
-        <p>メンバーが学び合い、互いに“伸びていく”こと自体を原動力にしたコミュニティの例。成長の実感が、人を惹きつけ続けます。</p>
+        <h4>伸びていった、ある学習コミュニティ</h4>
+        <p>メンバーが学び合い、互いに“伸びていく”こと自体を原動力に。成長の実感が、人を惹きつけ続けました。</p>
       </div>
       <div class="case reveal">
         <span class="type-badge">革新型</span>
-        <h4>グローバルイノベーション</h4>
-        <p>新しい発想と挑戦を歓迎し、変化そのものを楽しむコミュニティの例。前例のなさが、価値と熱量を生みます。</p>
+        <h4>広がっていった、ある挑戦者の集まり</h4>
+        <p>新しい発想と挑戦を歓迎し、変化そのものを楽しむ場に。前例のなさが、価値と熱量を生みました。</p>
+      </div>
+      <div class="case avoid reveal">
+        <span class="type-badge">分離型</span>
+        <h4>消えていったコミュニティ ①</h4>
+        <p>個人主義が強く、メンバー同士のつながりが希薄。干渉せず、共通の目的も薄れ——やがて“集まる理由”が失われていきました。</p>
+      </div>
+      <div class="case avoid reveal">
+        <span class="type-badge">緊張型</span>
+        <h4>消えていったコミュニティ ②</h4>
+        <p>対立や責任の押しつけ合いが続き、ピリピリした空気に。摩擦で消耗し、居心地の悪さから人が離れていきました。</p>
       </div>
     </div>
-    <p class="case-note reveal">※ 各事例の中身は、セミナー内で詳しく解説します。</p>
+    <p class="case-note reveal">※ 社名は伏せています。各事例の詳しい中身は、セミナー内で解説します。</p>
   </div>
 </section>
 
@@ -430,26 +380,7 @@
         <div class="qcell q3"><div class="qh">互助</div><div class="qd">支え合い、信頼で長く続く力。</div><div class="qt">例：互助型・伝統型</div></div>
         <div class="qcell q4"><div class="qh">共感</div><div class="qd">想いでつながり、熱量が生まれる力。</div><div class="qt">例：熱狂型</div></div>
       </div>
-      <p class="quad-note">※ 16タイプは、この4つの力のバランスで表せます。（軸の詳細は当日）</p>
-    </div>
-  </div>
-</section>
-
-<!-- 16タイプ診断 -->
-<section class="about">
-  <div class="wrap">
-    <p class="sec-lead reveal">16 TYPES</p>
-    <h2 class="sec-title reveal">あなたのコミュニティは、<br>どのタイプ？</h2>
-    <div class="about-grid">
-      <div class="about-copy reveal">
-        <h3>大事なのは、細かい分類を覚えることじゃない。<br>「型で必要なものが違う」と気づくこと。</h3>
-        <p>コミュニティは全部で<span class="accent-num">16</span>タイプ。タイプごとに、集めるべき人も、続く仕組みも、そして<b style="color:var(--navy)">“お金の生み方”まで違います</b>。人数が力になる型もあれば、少人数でこそ濃く機能する型もある。物販が合う型、月額が合う型、無償の熱量そのものが価値になる型…。</p>
-        <p>本セミナーでは、この全体像を体感していただきます。<span style="color:var(--mid-gray);font-size:13px;">（各タイプの詳しい診断・設計は、有料の「16分類勉強会」で深掘りします）</span></p>
-      </div>
-      <div class="reveal">
-        <div class="matrix" id="matrix"></div>
-        <p class="matrix-note">濃色＝良い型（6）／赤枠＝避けたい型。詳しい見分け方は当日＆勉強会で。</p>
-      </div>
+      <p class="quad-note">※ 16タイプは、この4つの力のバランスで表せます。（詳細は当日）</p>
     </div>
   </div>
 </section>
@@ -469,14 +400,14 @@
     <h2 class="sec-title reveal">当日、お話しすること</h2>
     <div class="agenda">
       <div class="ag-item reveal"><div class="n">1</div><p>こんな症状、出ていませんか？</p></div>
-      <div class="ag-item reveal"><div class="n">2</div><p>避けたい2つのタイプ（洗脳型・悲観型）</p></div>
+      <div class="ag-item reveal"><div class="n">2</div><p>避けたい2つのタイプ（分離型・緊張型）</p></div>
       <div class="ag-item reveal"><div class="n">3</div><p>組織とコミュニティの違い</p></div>
       <div class="ag-item reveal"><div class="n">4</div><p>コミュニティにできること（経営者・運営者向け）</p></div>
       <div class="ag-item reveal"><div class="n">5</div><p>事例紹介（成長型・革新型）</p></div>
       <div class="ag-item reveal"><div class="n">6</div><p>コミュニティの4象限</p></div>
       <div class="ag-item reveal"><div class="n">7</div><p>16タイプ診断（全タイプ一覧）</p></div>
       <div class="ag-item reveal"><div class="n">8</div><p>これからは「コミュニティを作れる人」の時代</p></div>
-      <div class="ag-item close reveal"><div class="n">9</div><p>次の学びのご案内（16分類勉強会）</p></div>
+      <div class="ag-item close reveal"><div class="n">9</div><p>まとめと質疑応答</p></div>
     </div>
   </div>
 </section>
@@ -528,22 +459,6 @@
   </div>
 </section>
 
-<!-- 次のステップ：16分類勉強会 -->
-<section class="next-sec">
-  <div class="wrap">
-    <p class="sec-lead reveal">NEXT STEP</p>
-    <h2 class="sec-title reveal">もっと深く学びたい方へ。</h2>
-    <div class="price-block reveal">
-      <p class="lbl">この無料セミナーの、次のステップ</p>
-      <h3>16分類勉強会</h3>
-      <div class="price">¥50,000<small> ／人（税込）</small></div>
-      <div class="meta"><span>⏱ <b>約5時間</b></span><span>👥 <b>少人数制</b></span><span>🎯 <b>実践ワーク付き</b></span></div>
-      <p class="desc">各タイプの見分け方から、あなたのコミュニティの設計、そして型に合ったマネタイズまで。半日でじっくり落とし込む、本格の学びの場です。</p>
-      <p class="free-first">＼ まずは無料セミナーで、“型”を体験してから ／</p>
-    </div>
-  </div>
-</section>
-
 <!-- FAQ -->
 <section class="faq">
   <div class="wrap">
@@ -552,8 +467,7 @@
     <div class="faq-list">
       <details class="qa reveal"><summary><span><span class="qmark">Q.</span>今のコミュニティがうまくいっていなくても参加していいですか？</span><span class="plus"></span></summary><div class="a">もちろんです。むしろ「盛り上がりが続かない」「手応えがない」と感じている方にこそ、16分類の視点が役立ちます。専門知識も事前準備も不要です。</div></details>
       <details class="qa reveal"><summary><span><span class="qmark">Q.</span>顔出し（カメラON）は必要ですか？</span><span class="plus"></span></summary><div class="a">はい。本セミナーは双方向でのやり取りを大切にしているため、カメラON（顔出し）でのご参加をお願いしています。少人数制で、安心してご参加いただける場づくりを心がけています。</div></details>
-      <details class="qa reveal"><summary><span><span class="qmark">Q.</span>この無料セミナーで16分類は詳しく学べますか？</span><span class="plus"></span></summary><div class="a">本セミナーは「コミュニティには型がある」と気づいていただく入り口です。各タイプの詳しい見分け方・設計・マネタイズは、有料の「16分類勉強会」（¥50,000／約5時間）でじっくり扱います。</div></details>
-      <details class="qa reveal"><summary><span><span class="qmark">Q.</span>勉強会（有料）への参加は必須ですか？</span><span class="plus"></span></summary><div class="a">いいえ、任意です。無料セミナーは単体でお楽しみいただけます。「もっと深く学びたい」と感じた方だけ、次のステップとして勉強会をご検討ください。</div></details>
+      <details class="qa reveal"><summary><span><span class="qmark">Q.</span>この無料セミナーでは、何が得られますか？</span><span class="plus"></span></summary><div class="a">「コミュニティには型があり、型ごとに必要なものが違う」という気づきを、事例を交えて持ち帰っていただけます。専門知識も事前準備も不要です。</div></details>
       <details class="qa reveal"><summary><span><span class="qmark">Q.</span>申し込み後の流れは？</span><span class="plus"></span></summary><div class="a">フォーム送信後、ご登録のメールアドレスにZoomの参加URLをお送りします。当日はそのURLからご入室ください。</div></details>
     </div>
   </div>
@@ -584,13 +498,13 @@
   const types=[
     {n:"革新型",fit:true},{n:"伝統型",fit:true},{n:"保守型"},{n:"奮闘型"},
     {n:"発展型",fit:true},{n:"葛藤型"},{n:"成長型",fit:true},{n:"強欲型"},
-    {n:"互助型",fit:true},{n:"分離型"},{n:"逃避型"},{n:"緊張型"},
-    {n:"洗脳型",bad:true},{n:"悲観型",bad:true},{n:"傲慢型"},{n:"熱狂型",fit:true}
+    {n:"互助型",fit:true},{n:"分離型",bad:true},{n:"逃避型"},{n:"緊張型",bad:true},
+    {n:"洗脳型"},{n:"悲観型"},{n:"傲慢型"},{n:"熱狂型",fit:true}
   ];
   const chips=document.getElementById('chips');
   types.forEach(t=>{const s=document.createElement('span');s.className='type-chip'+(t.fit?' on':'')+(t.bad?' bad':'');s.textContent=t.n;chips.appendChild(s);});
   const mx=document.getElementById('matrix');
-  types.forEach((t,i)=>{const c=document.createElement('div');c.className='cell'+(t.fit?' fit':'')+(t.bad?' bad':'');c.innerHTML='<span class="n">'+String(i+1).padStart(2,'0')+'</span>'+t.n;mx.appendChild(c);});
+  if(mx){types.forEach((t,i)=>{const c=document.createElement('div');c.className='cell'+(t.fit?' fit':'')+(t.bad?' bad':'');c.innerHTML='<span class="n">'+String(i+1).padStart(2,'0')+'</span>'+t.n;mx.appendChild(c);});}
 
   const tb=document.getElementById('topbar');
   window.addEventListener('scroll',()=>{tb.classList.toggle('scrolled',window.scrollY>40);});
